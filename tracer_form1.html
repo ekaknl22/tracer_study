@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracer Study UAD Tahap II</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar custom-navbar shadow-sm p-0">
+        <div class="container-fluid p-0 ps-2">
+            <a class="navbar-brand text-white d-flex align-items-center" href="#">
+                <img src="asset/Logo-UAD-Berwarna.png" alt="logo" class="navbar-logo">
+                <span class="fw-light d-none d-md-inline">Career Development Center</span>
+                <span class="fw-light d-inline d-md-none">CDC</span>
+            </a>
+
+            <button class="navbar-toggler border-0 d-md-none me-3 my-custom-toggler" type="button" data-bs-toggle="collapse" style="background-color: #25CCF7;" data-bs-target="#navbarContent">
+                <i class="bi bi-list text-white"></i>
+            </button>
+
+            <div class="d-flex align-items-center h-100 gap-3 d-none d-md-flex">
+                <div class="input-group search-box">
+                    <input type="text" class="form-control form-control-sm rounded-0" placeholder="search">
+                    <button class="btn btn-info btn-sm text-white rounded-0" type="button"><i class="bi bi-search"></i></button>
+                </div>
+                <div class="profile-dropdown bg-info rounded-cube px-2 py-1 d-flex align-items-center gap-1">
+                    <i class="bi bi-person-circle text-white fs-4"></i>
+                    <i class="bi bi-caret-down-fill text-white"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-tab tracer-form1">
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <div class="menu-bar">
+                <ul class="menu-list">
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#">Lowongan Kerja</a></li>
+                    <li class="nav-item"><a href="#">Berita</a></li>
+                    <li class="nav-item"><a href="#">Event</a></li>
+                    <li class="nav-item"><a class="active" href="#">Tracer Study</a></li>
+                    <li class="nav-item"><a href="#">Konsultasi Alumni Wirausaha</a></li>
+                    <li class="nav-item"><a href="#">Konsultasi Karir dan Bisnis</a></li>
+                    <li class="nav-item"><a href="#">Download</a></li>
+                    <li class="nav-item"><a href="#">Alumni</a></li>
+                    <li class="nav-item"><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container mt-5">
+            <div class="stepper-container">
+                <div class="stepper-line"></div>
+
+                <div class="step-item active">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Status<br>Alumni</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Detail Status<br>Alumni</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Kompetensi Lulus</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Kompetensi Alumni</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container mt-5 ps-md-5 ms-md-6">
+            <h6 class="text-primary-dark fw-bold mb-4">Konfirmasi Status Alumni</h6>
+            <h6 class="fw-bold mb-3 small">1. Jelaskan status anda saat ini</h6>
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="status" id="status1">
+                <label class="form-check-label small" for="status1">Bekerja (full time / part time)</label>
+            </div>
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="status" id="status2">
+                <label class="form-check-label small" for="status2">Wiraswasta</label>
+            </div>
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="status" id="status3">
+                <label class="form-check-label small" for="status3">Melanjutkan Pendidikan</label>
+            </div>
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="status" id="status4">
+                <label class="form-check-label small" for="status4">Tidak Kerja tetapi sedang mencari kerja</label>
+            </div>
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="status" id="status5">
+                <label class="form-check-label small" for="status5">Belum memungkinkan bekerja</label>
+            </div>
+
+            <div id="error-message" class="text-danger small mt-2" style="display: none;">
+                *Status alumni wajib di isi
+            </div>
+        </div>
+        
+        <div class="d-flex justify-content-between justify-content-md-end align-items-center gap-3 mt-5 pe-md-5">
+            <a href="index.html" class="text-decoration-none d-flex align-items-center" style="color: #428BCA;">
+                <i class="bi bi-arrow-left d-md-none btn-back fs-2"></i> 
+                <span class="d-none d-md-inline" style="border-bottom: 2px solid #428BCA;">Kembali</span> 
+            </a>
+            
+            <button type="button" id="btnNext" class="btn btn-next d-flex align-items-center justify-content-center">
+                <span class="d-none d-md-inline me-2">Selanjutnya</span> <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+        <div style="height: 30px;"></div>
+    </div>
+
+    <div style="height: 70px;"></div>
+    <footer class="footer mt-5 py-2 text-center text-white" style="background-color: #171b58;">
+        <div class="container">
+            <span class="small">Copyright 2026</span>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const radioButtons = document.querySelectorAll('input[name="status"]');
+        const btnNext = document.getElementById('btnNext');
+        const errorMessage = document.getElementById('error-message');
+
+        btnNext.classList.add('is-disabled');
+
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', () => {
+                btnNext.classList.remove('is-disabled');
+                errorMessage.style.display = 'none';
+            });
+        });
+
+        const tracerData = JSON.parse(localStorage.getItem('tracerData'));
+
+        if (tracerData) {
+            switch (tracerData.alumniStatus) {
+                case 'employed':
+                    document.getElementById('status1').checked = true;
+                    break;
+                case 'self_employed':
+                    document.getElementById('status2').checked = true;
+                    break;
+                case 'continue_study':
+                    document.getElementById('status3').checked = true;
+                    break;
+                case 'job_search':
+                    document.getElementById('status4').checked = true;
+                    break;
+                case 'not_work':
+                    document.getElementById('status5').checked = true;
+                    break;
+            }
+            btnNext.classList.remove('is-disabled');
+        }
+
+        btnNext.addEventListener('click', (e) => {
+            // Cek apakah ada radio yang terpilih
+            const isChecked = document.querySelector('input[name="status"]:checked');
+    
+            if (!isChecked) {
+                e.preventDefault(); // Mencegah pindah halaman
+                errorMessage.style.display = 'block';
+                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                let tracerData = JSON.parse(localStorage.getItem('tracerData')) || {};
+                let alumniStatus = '';
+
+                if (document.getElementById('status1').checked) {
+                    alumniStatus = 'employed';
+                } else if (document.getElementById('status2').checked) {
+                    alumniStatus = 'self_employed';
+                } else if (document.getElementById('status3').checked) {
+                    alumniStatus = 'continue_study';
+                } else if (document.getElementById('status4').checked) {
+                    alumniStatus = 'job_search';
+                } else if (document.getElementById('status5').checked) {
+                    alumniStatus = 'not_work';
+                }
+
+                tracerData.alumniStatus = alumniStatus;
+                console.log(tracerData);
+                localStorage.setItem('tracerData', JSON.stringify(tracerData));
+
+                tracerData.alumniStatus = alumniStatus;
+                tracerData.alumniStatusText = document.querySelector('input[name="status"]:checked').nextElementSibling.textContent;
+
+                if (document.getElementById('status1').checked) {
+                    window.location.href = 'tracer_form2_employed.html';
+                } else if (document.getElementById('status2').checked) {
+                    window.location.href = 'tracer_form2_self_employed.html';
+                } else if (document.getElementById('status3').checked) {
+                    window.location.href = 'tracer_form2_continuing_study.html';
+                } else if (document.getElementById('status4').checked) {
+                    window.location.href = 'tracer_form2_jobsearch.html';
+                } else if (document.getElementById('status5').checked) {
+                    window.location.href = 'tracer_form2_not_work.html';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

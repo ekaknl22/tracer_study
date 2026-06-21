@@ -1,0 +1,130 @@
+/* Navbar utama */
+.navbar-custom{
+    background-color: #1f2b5c;
+    height: 60px;
+    color: white;
+}
+
+/* Logo */
+.logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Judul */
+.title{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Search box */
+.search-box{
+    background-color: #e5e5e5;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.search-box input{
+    border: none;
+    padding: 6px 10px;
+    outline: none;
+    width: 150px;
+    font-size: 14px;
+}
+
+.search-box button{
+    background-color: #2cc5d3;
+    border: none;
+    padding: 6px 10px;
+    color: white;
+}
+
+/* Profile kanan */
+.profile-box{
+    background-color: #2cc5d3;
+    padding: 0 10px;
+    height: 60px;
+}
+
+/* Text login */
+.login-text{
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* Avatar */
+.avatar{
+    width: 40px;
+    height: 40px;
+    background-color: #1f2b5c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar i{
+    color: white;
+    font-size: 20px;
+}
+
+//mulai
+/* Pengaturan Dasar Tabel */
+.questionnaire-table th {
+    font-size: 0.85rem;
+    color: #2d3748;
+}
+
+.questionnaire-table td {
+    padding: 1rem 0.5rem;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #edf2f7;
+}
+
+/* Container Label */
+.likert-radio {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Sembunyikan Radio Default Browser */
+.likert-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+
+/* Lingkaran Angka Kustom (Membuat Angka Center Sempurna) */
+.likert-radio span {
+    display: inline-flex;       /* Mengaktifkan flexbox */
+    align-items: center;        /* Center vertikal */
+    justify-content: center;     /* Center horizontal */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #cbd5e1;   /* Border default abu-abu */
+    background-color: #ffffff;
+    color: #a0aec0;              /* Warna teks default */
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Efek Hover Kursor */
+.likert-radio:hover span {
+    border-color: #2ecc71;       /* Berubah hijau saat disorot */
+    color: #2ecc71;
+}
+
+/* State Terpilih / Klik Aktif (Sesuai Gambar) */
+.likert-radio input:checked + span {
+    background-color: #2ecc71;   /* Warna latar hijau penuh */
+    border-color: #2ecc71;
+    color: #ffffff;              /* Angka berubah putih */
+    font-weight: bold;
+}
