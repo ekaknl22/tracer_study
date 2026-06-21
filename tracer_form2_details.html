@@ -278,21 +278,21 @@
             accordionItem.classList.toggle('is-answered', this.value.trim() !== '')
         }
 
-        // document.getElementById('tracerAccordion').addEventListener('click', function(e) {
-        //     console.log(e.target.tagName);
-        //     const accordionBody = e.target.closest('.accordion-body');
-        //     if (!accordionBody) return;
-        //     if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'label' || e.target.tagName.toLowerCase() === 'select') {
-        //         e.stopPropagation();
-        //         return;
-        //     }
-        //     const collapseElement = accordionBody.closest('.accordion-collapse');
+        document.getElementById('tracerAccordion').addEventListener('click', function(e) {
+            console.log(e.target.tagName);
+            const accordionBody = e.target.closest('.accordion-body');
+            if (!accordionBody) return;
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'label' || e.target.tagName.toLowerCase() === 'select') {
+                e.stopPropagation();
+                return;
+            }
+            const collapseElement = accordionBody.closest('.accordion-collapse');
 
-        //     const bsCollapse = bootstrap.Collapse.getInstance(collapseElement);
-        //     if (bsCollapse) {
-        //         bsCollapse.hide();
-        //     }
-        // });
+            const bsCollapse = bootstrap.Collapse.getInstance(collapseElement);
+            if (bsCollapse) {
+                bsCollapse.hide();
+            }
+        });
 
         const dataWilayah = {
             "DI Yogyakarta": ["Yogyakarta", "Sleman", "Bantul", "Kulon Progo", "Gunungkidul"],
