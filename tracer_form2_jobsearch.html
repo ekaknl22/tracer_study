@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracer Study Tahap II</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar custom-navbar shadow-sm p-0">
+        <div class="container-fluid p-0 ps-2">
+            <a class="navbar-brand text-white d-flex align-items-center" href="#">
+                <img src="asset/Logo-UAD-Berwarna.png" alt="logo" class="navbar-logo">
+                <span class="fw-light d-none d-md-inline">Career Development Center</span>
+                <span class="fw-light d-inline d-md-none">CDC</span>
+            </a>
+
+            <button class="navbar-toggler border-0 d-md-none me-3 my-custom-toggler" type="button" data-bs-toggle="collapse" style="background-color: #25CCF7;" data-bs-target="#navbarContent">
+                <i class="bi bi-list text-white"></i>
+            </button>
+
+            <div class="d-flex align-items-center h-100 gap-3 d-none d-md-flex">
+                <div class="input-group search-box">
+                    <input type="text" class="form-control form-control-sm rounded-0" placeholder="search">
+                    <button class="btn btn-info btn-sm text-white rounded-0" type="button"><i class="bi bi-search"></i></button>
+                </div>
+                <div class="profile-dropdown bg-info rounded-cube px-2 py-1 d-flex align-items-center gap-1">
+                    <i class="bi bi-person-circle text-white fs-4"></i>
+                    <i class="bi bi-caret-down-fill text-white"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-tab tracer-form1">
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <div class="menu-bar">
+                <ul class="menu-list">
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#">Lowongan Kerja</a></li>
+                    <li class="nav-item"><a href="#">Berita</a></li>
+                    <li class="nav-item"><a href="#">Event</a></li>
+                    <li class="nav-item"><a class="active" href="#">Tracer Study</a></li>
+                    <li class="nav-item"><a href="#">Konsultasi Alumni Wirausaha</a></li>
+                    <li class="nav-item"><a href="#">Konsultasi Karir dan Bisnis</a></li>
+                    <li class="nav-item"><a href="#">Download</a></li>
+                    <li class="nav-item"><a href="#">Alumni</a></li>
+                    <li class="nav-item"><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container mt-5">
+            <div class="stepper-container">
+                <div class="stepper-line"></div>
+                <div class="stepper-line-progress" style="width: 28%;"></div>
+
+                <div class="step-item completed">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Status<br>Alumni</div>
+                </div>
+                <div class="step-item active">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Detail Status<br>Alumni</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Kompetensi Lulus</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Kompetensi Alumni</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 px-md-4">
+            <div style="max-width: 75%; margin: 0 auto;">
+                <h6 class="text-primary-dark fw-bold mb-4">Informasi Mencari Kerja</h6>
+
+                <div class="accordion custom-accordion" id="tracerAccordion">
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                1. Apakah Anda aktif mencari pekerjaan dalam 4 minggu terakhir? Pilihlah satu jawaban
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input q1-radio" type="radio" name="q1" id="q1_1">
+                                    <label class="form-check-label" for="q1_1">Tidak</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input q1-radio" type="radio" name="q1" id="q1_2">
+                                    <label class="form-check-label" for="q1_2">Tidak, tapi saya sedang menunggu hasil lamaran kerja</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input q1-radio" type="radio" name="q1" id="q1_3">
+                                    <label class="form-check-label" for="q1_3">Ya, saya akan mulai bekerja mulai bekerja dalam 2 minggu ke depan</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input q1-radio" type="radio" name="q1" id="q1_4">
+                                    <label class="form-check-label" for="q1_4">Ya, tapi saya belum pasti akan bekerja dalam 2 minggu ke depan</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input q1-radio" type="radio" name="q1" id="q1_8">
+                                    <label class="form-check-label" for="q1_8">Lainnya, tuliskan:</label><br>
+                                    <input type="text" id="q1_8_text" class="form-control form-control-sm other-radio mt-1" style="max-width: 250px;" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                2. Berapa banyak perusahaan/instansi/institusi yang merespons lamaran anda?<br>(Isi dengan angka)
+                            </button>
+                        </h2>
+
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control custom-number input-field answer-input" id="inputValue" min="1" max="99">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                3. Berapa banyak perusahaan/instansi/institusi yang mengundang anda untuk wawancara?<br>(Isi dengan angka)
+                            </button>
+                        </h2>
+
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control custom-number input-field answer-input" id="inputNumber" min="1" max="99">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="error-message" class="text-danger small mt-2" style="display: none;">
+                    *Harap isi semua pertanyaan sebelum melanjutkan
+                </div>
+            </div>
+            <div class="d-flex justify-content-between justify-content-md-end align-items-center gap-3 mt-5 pe-md-5">
+                <a href="tracer_form1.html" class="text-decoration-none d-flex align-items-center" style="color: #428BCA;">
+                    <i class="bi bi-arrow-left d-md-none btn-back fs-2"></i> <span class="d-none d-md-inline" style="border-bottom: 2px solid #428BCA;">Kembali</span> 
+                </a>
+                <button type="button" id="btnNext" class="btn btn-next d-flex align-items-center justify-content-center disabled" aria-disabled="true">
+                    <span class="d-none d-md-inline me-2">Selanjutnya</span> <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+            <div style="height: 30px;"></div>
+        </div>
+    </div> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const radioButtons = document.querySelectorAll('input[name="q1"]');
+        const btnNext = document.getElementById('btnNext');
+        const errorMessage = document.getElementById('error-message');
+        const questions = ['q1', 'q2', 'q3'];
+
+        document.querySelectorAll('.form-check-input').forEach(input => {
+            input.addEventListener('change', function() {
+                const accordionItem = this.closest('.accordion-item');
+                if (this.checked) {
+                    accordionItem.classList.add('is-answered');
+                }
+            });
+        });
+
+        document.getElementById('tracerAccordion').addEventListener('click', function(e) {
+            const accordionBody = e.target.closest('.accordion-body');
+            if (!accordionBody) return;
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'label') {
+                e.stopPropagation();
+                return;
+            }
+            const collapseElement = accordionBody.closest('.accordion-collapse');
+            
+            const bsCollapse = bootstrap.Collapse.getInstance(collapseElement);
+            if (bsCollapse) {
+                bsCollapse.hide();
+            }
+        });
+
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', validateForm);
+            input.addEventListener('change', validateForm);
+        });
+
+        const q1Other = document.getElementById('q1_8');
+        const q1OtherText = document.getElementById('q1_8_text');
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const tracerData = JSON.parse(localStorage.getItem('tracerData'));
+
+            if(!tracerData) return;
+
+            document.getElementById('inputValue').value = tracerData.applicationResponses || '';
+            document.getElementById('inputNumber').value = tracerData.interviewInvitations || '';
+            document.querySelectorAll('input[name="q1"]').forEach(radio => {
+                const label = document.querySelector(`label[for="${radio.id}"]`);
+                const labelText = label ? label.textContent.trim() : '';
+                if(tracerData.jobSearchStatus === labelText || (radio.id === 'q1_8' && tracerData.jobSearchStatus && ![
+                    'Tidak',
+                    'Tidak, tapi saya sedang menunggu hasil lamaran kerja',
+                    'Ya, saya akan mulai bekerja mulai bekerja dalam 2 minggu ke depan',
+                    'Ya, tapi saya belum pasti akan bekerja dalam 2 minggu ke depan'
+                ].includes(tracerData.jobSearchStatus))
+            ) {
+                radio.checked = true;
+
+                if(radio.id === 'q1_8'){
+                    q1Other.checked = true;
+                    q1OtherText.disabled = false;
+                    q1OtherText.value = tracerData.jobSearchStatus;
+                }
+            }
+            });
+            validateForm();
+        });
+
+        q1Other.addEventListener('change', () => {
+            q1OtherText.disabled = !q1Other.checked;
+        });
+
+        document.querySelectorAll('input[name="q1"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (radio.id !== 'q1_8') {
+                    q1OtherText.disabled = true;
+                    q1OtherText.value = '';
+                }
+            });
+        });
+
+        document.getElementById('inputValue').addEventListener('input', function() {
+            this.closest('.accordion-item').classList.toggle('is-answered', this.value.trim() !== '');
+        });
+
+        document.getElementById('inputNumber').addEventListener('input', function() {
+            this.closest('.accordion-item').classList.toggle('is-answered',this.value.trim() !== ''
+            );
+        });
+
+        function validateForm() {
+            let allAnswered = true;
+
+            questions.forEach(qName => {
+                let isValid = false;
+
+                if (qName === 'q1') {
+                    isValid = document.querySelector('input[name="q1"]:checked');
+                }
+
+                if (qName === 'q2') {
+                    isValid = document.getElementById('inputValue').value.trim() !== '';
+                }
+
+                if (qName === 'q3') {
+                    isValid = document.getElementById('inputNumber').value.trim() !== '';
+                }
+
+                if (qName === 'q1') {
+                    const selected = document.querySelector('input[name="q1"]:checked');
+
+                    if (selected) {
+                        if (selected.id === 'q1_8') {
+                            isValid = document.getElementById('q1_8_text').value.trim() !== '';
+                        } else {
+                            isValid = true;
+                        }
+                    }
+                }
+
+                if (!isValid) {
+                    allAnswered = false;
+                }
+            });
+
+            if (document.querySelector('input[name="q1"]:checked')) {
+                document.querySelector('#collapse1').closest('.accordion-item').classList.add('is-answered');
+            }
+
+            if (document.getElementById('inputValue').value.trim() !== '') {
+                document.querySelector('#collapse2').closest('.accordion-item').classList.add('is-answered');
+            }
+
+            if (document.getElementById('inputNumber').value.trim() !== '') {
+                document.querySelector('#collapse3').closest('.accordion-item').classList.add('is-answered');
+            }
+
+            if (allAnswered) {
+                btnNext.classList.remove('disabled');
+                btnNext.removeAttribute('aria-disabled');
+                errorMessage.style.display = 'none';
+            } else {
+                btnNext.classList.add('disabled');
+                btnNext.setAttribute('aria-disabled', 'true');
+            }
+
+            return allAnswered;
+        }
+
+        function saveData(){
+            let tracerData = JSON.parse(localStorage.getItem('tracerData')) || {};
+            const selectQ1 = document.querySelector('input[name="q1"]:checked');
+
+            if(selectQ1){
+                if(selectQ1.id === 'q1_8'){
+                    tracerData.jobSearchStatus = q1OtherText.value;
+                }else{
+                    tracerData.jobSearchStatus = selectQ1.nextElementSibling.textContent.trim();
+                }
+            }
+
+            tracerData.applicationResponses = document.getElementById('inputValue').value;
+            tracerData.interviewInvitations = document.getElementById('inputNumber').value;
+
+            localStorage.setItem('tracerData', JSON.stringify(tracerData));
+        }
+
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', saveData);
+            input.addEventListener('change', saveData);
+        });
+
+        btnNext.addEventListener('click', function(e) {
+            if (!validateForm()) {
+                e.preventDefault();
+                errorMessage.style.display = 'block';
+
+                questions.forEach(qName => {
+                    let isValid = false;
+
+                    if (qName === 'q1') {
+                        isValid = document.querySelector('input[name="q1"]:checked');
+                    }
+
+                    if (qName === 'q2') {
+                        isValid = document.getElementById('inputValue').value.trim() !== '';
+                    }
+
+                    if (qName === 'q3') {
+                        isValid = document.getElementById('inputNumber').value.trim() !== '';
+                    }
+
+                    if (!isValid) {
+                        const accordionItem = document
+                            .querySelector(`[data-bs-target="#collapse${qName.replace('q', '')}"]`)
+                            .closest('.accordion-item');
+
+                        accordionItem.classList.remove('shake');
+                        void accordionItem.offsetWidth;
+                        accordionItem.classList.add('shake');
+                    }
+                });
+                return;
+            }
+            saveData();
+            window.location.href = 'tracer_form3.html';
+        });
+    </script>
+</body>
+</html>

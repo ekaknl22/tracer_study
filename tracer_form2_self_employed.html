@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracer STudy UAD Tahap I</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar custom-navbar shadow-sm p-0">
+        <div class="container-fluid p-0 ps-2">
+            <a class="navbar-brand text-white d-flex align-items-center" href="#">
+                <img src="asset/Logo-UAD-Berwarna.png" alt="logo" class="navbar-logo">
+                <span class="fw-light d-none d-md-inline">Career Development Center</span>
+                <span class="fw-light d-inline d-md-none">CDC</span>
+            </a>
+
+            <button class="navbar-toggler border-0 d-md-none me-3 my-custom-toggler" type="button" data-bs-toggle="collapse" style="background-color: #25CCF7;" data-bs-target="#navbarContent">
+                <i class="bi bi-list text-white"></i>
+            </button>
+
+            <div class="d-flex align-items-center h-100 gap-3 d-none d-md-flex">
+                <div class="input-group search-box">
+                    <input type="text" class="form-control form-control-sm rounded-0" placeholder="search">
+                    <button class="btn btn-info btn-sm text-white rounded-0" type="button"><i class="bi bi-search"></i></button>
+                </div>
+                <div class="profile-dropdown bg-info rounded-cube px-2 py-1 d-flex align-items-center gap-1">
+                    <i class="bi bi-person-circle text-white fs-4"></i>
+                    <i class="bi bi-caret-down-fill text-white"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-tab tracer-form2">
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <div class="menu-bar">
+                <ul class="menu-list">
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#">Lowongan Kerja</a></li>
+                    <li class="nav-item"><a href="#">Berita</a></li>
+                    <li class="nav-item"><a href="#">Event</a></li>
+                    <li class="nav-item"><a class="active" href="#">Tracer Study</a></li>
+                    <li class="nav-item"><a href="#">Konsultasi Alumni Wirausaha</a></li>
+                    <li class="nav-item"><a href="#">Konsultasi Karir dan Bisnis</a></li>
+                    <li class="nav-item"><a href="#">Download</a></li>
+                    <li class="nav-item"><a href="#">Alumni</a></li>
+                    <li class="nav-item"><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="stepper-container">
+                <div class="stepper-line"></div>
+                <div class="stepper-line-progress" style="width: 28%;"></div>
+
+                <div class="step-item completed">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Status<br>Alumni</div>
+                </div>
+                <div class="step-item active">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Detail Status<br>Alumni</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Kompetensi Lulus</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Kompetensi Alumni</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 px-md-4">
+            <div style="max-width: 75%; margin: 0 auto;">
+                <h6 class="text-primary-dark fw-bold mb-4">Informasi Wiraswasta</h6>
+
+                <div class="accordion custom-accordion" id="tracerAccordion">
+                    <!-- Pertanyaan 1 Wiraswasta-->
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                1. Bila berwiraswasta, apa posisi/jabatan Anda saat ini?
+                            </button>
+                        </h2>
+
+                        <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1_1">
+                                    <label class="form-check-label" for="q1_1">Founder</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1_2">
+                                    <label class="form-check-label" for="q1_2">Co-Founder</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1_3">
+                                    <label class="form-check-label" for="q1_3">Staff</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q1" id="q1_4">
+                                    <label class="form-check-label" for="q1_4">Freelance / Pekerja Lepas</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-2">
+                        <div class="accordion-header">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                    2. Apa tingkat tempat kerja Anda?
+                                </button>
+                            </h2>
+
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                                <div class="accordion-body">
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input" type="radio" name="q2" id="q2_1">
+                                        <label class="form-check-label" for="q2_1">Lokal/wilayah/wiraswasta tidak berbadan hukum</label>
+                                    </div>
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input" type="radio" name="q2" id="q2_2">
+                                        <label class="form-check-label" for="q2_2">Nasional/wiraswasta berbadan hukum</label>
+                                    </div>
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input" type="radio" name="q2" id="q2_3">
+                                        <label class="form-check-label" for="q2_3">Multinasional/Internasional</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                3. Apa jenis perusahaan tempat anda bekerja sekarang?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input q3-radio" type="radio" name="q3" id="q3_1">
+                                    <label class="form-check-label" for="q3_1">Instansi pemerintah</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input q3-radio" type="radio" name="q3" id="q3_2">
+                                    <label class="form-check-label" for="q3_2">BUMN/BUMD</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input q3-radio" type="radio" name="q3" id="q3_3">
+                                    <label class="form-check-label" for="q3_3">Institusi/Organisasi Multilateral</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input q3-radio" type="radio" name="q3" id="q3_4">
+                                    <label class="form-check-label" for="q3_4">Organisasi non-profil/Lembaga</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input q3-radio"  type="radio" name="q3" id="q3_5">
+                                    <label class="form-check-label" for="q3_5">Swadaya Masyarakat</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input q3-radio" type="radio" name="q3" id="q3_6">
+                                    <label class="form-check-label" for="q3_6">Perusahaan Swasta</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input q3-radio" type="radio" name="q3" id="q3_7">
+                                    <label class="form-check-label" for="q3_7">Wiraswasta/perusahaan sendiri</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input q3-radio" type="radio" name="q3" id="q3_8">
+                                    <label class="form-check-label" for="q3_8">Lainnya, tuliskan:</label><br>
+                                    <input type="text" id="q3_8_text" class="form-control form-control-sm other-radio mt-1" style="max-width: 250px;" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-2">
+                        <div class="accordion-header">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                    4. Tingkat pendidikan apa yang sesuai dengan pekerjaan Anda saat ini?
+                                </button>
+                            </h2>
+
+                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                                <div class="accordion-body">
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input" type="radio" name="q4" id="q4_1">
+                                        <label class="form-check-label" for="q4_1">Setingkat lebih Tinggi</label>
+                                    </div>
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input" type="radio" name="q4" id="q4_2">
+                                        <label class="form-check-label" for="q4_2">Tingkat yang Sama</label>
+                                    </div>
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input" type="radio" name="q4" id="q4_3">
+                                        <label class="form-check-label" for="q4_3">Setingkat Lebih Rendah</label>
+                                    </div>
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input" type="radio" name="q4" id="q4_4">
+                                        <label class="form-check-label" for="q4_4">Tidak Perlu Pendidikan Tinggi</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                5. Seberapa erat hubungan antara bidang studi dengan pekerjaan anda?
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q5" id="q5_1">
+                                    <label class="form-check-label" for="q5_1">Sangat Erat</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q5" id="q5_2">
+                                    <label class="form-check-label" for="q5_2">Erat</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q5" id="q5_3">
+                                    <label class="form-check-label" for="q5_3">Cukup Erat</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q5" id="q5_4">
+                                    <label class="form-check-label" for="q5_4">Kurang Erat</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="radio" name="q5" id="q5_5">
+                                    <label class="form-check-label" for="q5_5">Tidak Sama Sekali</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                                6. Dalam berapa bulan setelah lulus Anda memulai wiraswasta?
+                            </button>
+                        </h2>
+
+                        <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control custom-number input-field answer-input" id="inputMonth" min="1" max="99">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                                7. Jika menurut anda pekerjaan anda saat ini tidak sesuai dengan pendidikan anda, mengapa anda mengambilnya? Jawaban bisa lebih dari satu
+                            </button>
+                        </h2>
+                        <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="q7" id="q7_1">
+                                    <label class="form-check-label" for="q7_1">Pertanyaan tidak sesuai; pekerjaan saya sekarang sudah sesuai dengan pendidikan saya</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="q7" id="q7_2">
+                                    <label class="form-check-label" for="q7_2">Saya belum mendaptkan pekerjaan yang sesuai</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="q7" id="q7_3">
+                                    <label class="form-check-label" for="q7_3">Di pekerjaan ini saya memperoleh prospek karir yang baik</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="q7" id="q7_4">
+                                    <label class="form-check-label" for="q7_4">Saya lebih suka bekerja di area pekerjaan yang tidak ada hubungannya dengan pendidikan saya</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="q7" id="q7_5">
+                                    <label class="form-check-label" for="q7_5">Saya dipromosikan ke posisi yang kurang berhubungan dengan pendidikan saya dibanding posisi sebelumnya</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="q7" id="q7_6">
+                                    <label class="form-check-label" for="q7_6">Saya dapat memperoleh pendapatan yang lebih tinggi di pekerjaan ini</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="q7" id="q7_7">
+                                    <label class="form-check-label" for="q7_7">Pekerjaan saya saat ini lebih aman/terjamin/secure</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="q7" id="q7_8">
+                                    <label class="form-check-label" for="q7_8">Pekerjaan saya saat ini lebih menarik</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="q7" id="q7_9">
+                                    <label class="form-check-label" for="q7_9">Pekerjan saya saat ini lebih memungkinkan saya mengambil pekerjaan tambahan/jadwal yang fleksibel, dll</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="q7" id="q7_10">
+                                    <label class="form-check-label" for="q7_10">Pekerjaan saya saat ini lokasinya lebih dekat dari rumah saya</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="q7" id="q7_11">
+                                    <label class="form-check-label" for="q7_11">Pekerjaan saya saat ini dapat lebih menjamin kebutuhan keluarga saya</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input" type="checkbox" name="q7" id="q7_12">
+                                    <label class="form-check-label" for="q7_12">Pada awal meniti karir, saya harus menerima pekerjaan yang tidak berhubungan dengan pendidikan saya</label>
+                                </div>
+                                <div class="form-check mb-1">
+                                    <input class="form-check-input q7-group" type="checkbox" name="q7" id="q7_13">
+                                    <label class="form-check-label" for="q7_13">Lainnya, tuliskan:</label>
+                                    <input type="text" id="q7_13_text" class="form-control form-control-sm other-radio mt-1" style="max-width: 200px;" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="error-message" class="text-danger small mt-2" style="display: none;">
+                    *Harap isi semua pertanyaan sebelum melanjutkan
+                </div>
+            </div>
+            <div class="d-flex justify-content-between justify-content-md-end align-items-center gap-3 mt-5 pe-md-5">
+                <a href="tracer_form1.html" class="text-decoration-none d-flex align-items-center" style="color: #428BCA;">
+                    <i class="bi bi-arrow-left d-md-none btn-back fs-2"></i> <span class="d-none d-md-inline" style="border-bottom: 2px solid #428BCA;">Kembali</span> 
+                </a>
+                <button type="button" id="btnNext" class="btn btn-next d-flex align-items-center justify-content-center disabled" aria-disabled="true">
+                    <span class="d-none d-md-inline me-2">Selanjutnya</span> <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+            <div style="height: 30px;"></div>
+        </div>
+    </div>
+
+    <div style="height: 70px;"></div>
+    <footer class="footer mt-5 py-2 text-center text-white" style="background-color: #171b58;">
+        <div class="container">
+            <span class="small">Copyright 2026</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function updateAccordion() {
+            const accordionItem = this.closest('.accordion-body')?.closest('.accordion-item');
+            if(!accordionItem) return;
+
+            if(this.type === 'radio' || this.type === 'checkbox') {
+                const checkedInputs = accordionItem.querySelectorAll('.form-check-input:checked');
+                accordionItem.classList.toggle('is-answered', checkedInputs.length > 0);
+            }else{
+                accordionItem.classList.toggle('is-answered', this.value.trim() !== '');
+            }
+        }
+
+        document.querySelectorAll('.form-check-input, .answer-input')
+            .forEach(input => {
+                input.addEventListener('change', updateAccordion);
+                input.addEventListener('input', updateAccordion);
+            });
+
+        document.getElementById('tracerAccordion').addEventListener('click', function(e) {
+            const accordionBody = e.target.closest('.accordion-body');
+                if (!accordionBody) return;
+                if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'label') {
+                    e.stopPropagation();
+                    return;
+                }
+            const collapseElement = accordionBody.closest('.accordion-collapse');
+    
+            const bsCollapse = bootstrap.Collapse.getInstance(collapseElement);
+                if (bsCollapse) {
+                bsCollapse.hide();
+            }
+        });
+
+        const q7OtherRadio = document.getElementById('q7_13');
+        const q7OtherInput = document.getElementById('q7_13_text');
+
+        q7OtherRadio.addEventListener('change', function(){
+            if(this.checked){
+                q7OtherInput.disabled = false;
+                q7OtherInput.focus();
+            }else{
+                q7OtherInput.disabled = true;
+                q7OtherInput.value = '';
+            }
+        });
+
+        const q3Radios = document.querySelectorAll('.q3-radio');
+        const q3OtherInput = document.getElementById('q3_8_text');
+        const q3OtherRadio = document.getElementById('q3_8');
+
+        q3Radios.forEach(radio => {
+            radio.addEventListener('change', function(){
+                if (q3OtherRadio.checked){
+                    q3OtherInput.disabled = false;
+                    q3OtherInput.focus();
+                }else{
+                    q3OtherInput.disabled = true;
+                    q3OtherInput.value = '';
+                }
+            })
+        })
+
+        const btnNext = document.getElementById('btnNext');
+        const questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7'];
+        const errorMessage = document.getElementById('error-message');
+
+        function saveFormData(){
+            let tracerData = JSON.parse(localStorage.getItem('tracerData')) || {};
+
+            tracerData.self_q1 = document.querySelector('input[name="q1"]:checked')?.nextElementSibling.textContent.trim() || '';
+            tracerData.self_q2 = document.querySelector('input[name="q2"]:checked')?.nextElementSibling.textContent.trim() || '';
+            
+            if(document.getElementById('q3_8').checked){
+                tracerData.self_q3 = document.getElementById('q3_8_text').value.trim();
+            }else{
+                tracerData.self_q3 = document.querySelector('input[name="q3"]:checked')?.nextElementSibling.textContent.trim() || '';
+            }
+
+            tracerData.self_q4 = document.querySelector('input[name="q4"]:checked')?.nextElementSibling.textContent.trim() || '';
+            tracerData.self_q5 = document.querySelector('input[name="q5"]:checked')?.nextElementSibling.textContent.trim() || '';
+            tracerData.self_q6 = document.getElementById('inputMonth').value;
+
+            tracerData.self_q7 = [];
+            document.querySelectorAll('input[name="q7"]:checked').forEach(item => {
+                if(item.id === 'q7_13'){
+                    tracerData.self_q7.push(document.getElementById('q7_13_text').value.trim());
+                }else{
+                    tracerData.self_q7.push(item.nextElementSibling.textContent.trim());
+                }
+            });
+
+            localStorage.setItem('tracerData', JSON.stringify(tracerData));
+        }
+
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('change', () => {
+                validateForm();
+                saveFormData();
+            });
+
+            input.addEventListener('input', () => {
+                validateForm();
+                saveFormData();
+            });
+        });
+
+        const tracerData = JSON.parse(localStorage.getItem('tracerData')) || {};
+
+            if(tracerData.self_q1){
+                document.querySelectorAll('input[name="q1"]').forEach(radio => {
+                    if(radio.nextElementSibling.textContent.trim() === tracerData.self_q1){
+                        radio.checked = true;
+                    }
+                });
+            }
+
+            if(tracerData.self_q2){
+                document.querySelectorAll('input[name="q2"]').forEach(radio => {
+                    if(radio.nextElementSibling.textContent.trim() === tracerData.self_q2){
+                        radio.checked = true;
+                    }
+                });
+            }
+
+            if(tracerData.self_q3){
+                let found = false;
+
+                document.querySelectorAll('input[name="q3"]').forEach(radio => {
+                    const label = radio.nextElementSibling.textContent.trim();
+
+                    if (label === tracerData.self_q3){
+                        radio.checked = true;
+                        found = true;
+                    }
+                });
+
+                if(!found){
+                    q3OtherRadio.checked = true;
+                    q3OtherInput.disabled = false;
+                    q3OtherInput.value = tracerData.self_q3;
+                }
+            }
+
+            if(tracerData.self_q4) {
+                document.querySelectorAll('input[name="q4"]').forEach(radio => {
+                    if(radio.nextElementSibling.textContent.trim() === tracerData.self_q4){
+                        radio.checked = true;
+                    }
+                });
+            }
+
+            if(tracerData.self_q5){
+                document.querySelectorAll('input[name="q5"]').forEach(radio => {
+                    if(radio.nextElementSibling.textContent.trim() === tracerData.self_q5){
+                        radio.checked = true;
+                    }
+                });
+            }
+
+            if(tracerData.self_q6){
+                document.getElementById('inputMonth').value = tracerData.self_q6;
+            }
+
+            if (tracerData.self_q7) {
+                document.querySelectorAll('input[name="q7"]').forEach(check => {
+                    const label = check.nextElementSibling.textContent.trim();
+                    if (tracerData.self_q7.includes(label)) {
+                        check.checked = true;
+                    }
+                });
+
+                const customQ7 = (tracerData.self_q7 || []).find(item => !Array.from(document.querySelectorAll('input[name="q7"]')).some(c => c.nextElementSibling.textContent.trim() === item));
+
+                if(customQ7){
+                    document.getElementById('q7_13').checked = true;
+                    document.getElementById('q7_13_text').disabled = false;
+                    document.getElementById('q7_13_text').value = customQ7;
+                }
+            }
+        validateForm();
+        document.querySelectorAll('.form-check-input, .answer-input').forEach(input => updateAccordion.call(input));
+
+        btnNext.addEventListener('click', function(e) {
+            if (this.classList.contains('disabled')) {
+                e.preventDefault(); 
+                errorMessage.style.display = 'block'; 
+
+                questions.forEach(qName => {
+                    let isChecked;
+                    if(qName === 'q6'){
+                        isChecked = document.getElementById('inputMonth').value.trim() !== '';
+                    }else{
+                        isChecked = document.querySelector(`input[name="${qName}"]:checked`);
+                    }
+
+                    let isTextValid = true;
+                    if(qName === 'q3' && document.getElementById('q3_8')?.checked&& document.getElementById('q3_8_text').value.trim() === ''){
+                        isTextValid = false;
+                    }
+
+                    if (qName === 'q7' && document.getElementById('q7_13')?.checked && document.getElementById('q7_13_text').value.trim() === '') {
+                        isTextValid = false;
+                    }
+
+                    if(!isChecked || !isTextValid){
+                        const accordionItem = document.querySelector(`[data-bs-target="#collapse${qName.replace('q', '')}"]`).closest('.accordion-item');
+                        accordionItem.classList.remove('shake');
+                        void accordionItem.offsetWidth;
+                        accordionItem.classList.add('shake');
+                    }
+                });                
+            }else{
+                window.location.href = 'tracer_form3.html';
+            }
+        });
+
+        function validateForm() {
+            let allAnswered = true;
+
+            questions.forEach(qName => {
+                let isAnswered = false;
+
+                if (qName === 'q6') {
+                    const monthInput = document.getElementById('inputMonth');
+                    const monthValue = parseInt(monthInput.value);
+                    isAnswered = !isNaN(monthValue) && monthValue >= 1 && monthValue <= 99;
+                }else if(qName === 'q7'){
+                    const checkedBoxes = document.querySelectorAll('input[name="q7"]:checked');
+                    isAnswered = checkedBoxes.length > 0;
+                } else {
+                    isAnswered = document.querySelector(`input[name="${qName}"]:checked`) !== null;
+                }
+
+                let isTextValid = true;
+
+                if (qName === 'q3' && document.getElementById('q3_8').checked && document.getElementById('q3_8_text').value.trim() === '') {
+                    isTextValid = false;
+                }
+
+                if (qName === 'q7' && document.getElementById('q7_13').checked && document.getElementById('q7_13_text').value.trim() === '') {
+                    isTextValid = false;
+                }
+
+                if (!isAnswered || !isTextValid) {
+                    allAnswered = false;
+                }
+            });
+
+            if (allAnswered) {
+                btnNext.classList.remove('disabled');
+                btnNext.removeAttribute('aria-disabled');
+                errorMessage.style.display = 'none';
+            } else {
+                btnNext.classList.add('disabled');
+                btnNext.setAttribute('aria-disabled', 'true');
+            }
+
+            return allAnswered;
+        }
+
+        document.querySelectorAll('.form-check-input, .answer-input').forEach(input => {
+            input.addEventListener('change', validateForm);
+            input.addEventListener('input', validateForm);
+        });
+
+        q3OtherInput.addEventListener('input', validateForm);
+        q7OtherInput.addEventListener('input', validateForm);
+
+        validateForm();
+    </script>
+</body>
+</html>

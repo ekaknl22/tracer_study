@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracer Study UAD Tahap II</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar custom-navbar shadow-sm p-0">
+        <div class="container-fluid p-0 ps-2">
+            <a class="navbar-brand text-white d-flex align-items-center" href="#">
+                <img src="asset/Logo-UAD-Berwarna.png" alt="logo" class="navbar-logo">
+                <span class="fw-light d-none d-md-inline">Career Development Center</span>
+                <span class="fw-light d-inline d-md-none">CDC</span>
+            </a>
+
+            <button class="navbar-toggler border-0 d-md-none me-3 my-custom-toggler" type="button" data-bs-toggle="collapse" style="background-color: #25CCF7;" data-bs-target="#navbarContent">
+                <i class="bi bi-list text-white"></i>
+            </button>
+
+            <div class="d-flex align-items-center h-100 gap-3 d-none d-md-flex">
+                <div class="input-group search-box">
+                    <input type="text" class="form-control form-control-sm rounded-0" placeholder="search">
+                    <button class="btn btn-info btn-sm text-white rounded-0" type="button"><i class="bi bi-search"></i></button>
+                </div>
+                <div class="profile-dropdown bg-info rounded-cube px-2 py-1 d-flex align-items-center gap-1">
+                    <i class="bi bi-person-circle text-white fs-4"></i>
+                    <i class="bi bi-caret-down-fill text-white"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-tab tracer-form2">
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <div class="menu-bar">
+                <ul class="menu-list">
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#">Lowongan Kerja</a></li>
+                    <li class="nav-item"><a href="#">Berita</a></li>
+                    <li class="nav-item"><a href="#">Event</a></li>
+                    <li class="nav-item"><a class="active" href="#">Tracer Study</a></li>
+                    <li class="nav-item"><a href="#">Konsultasi Alumni Wirausaha</a></li>
+                    <li class="nav-item"><a href="#">Konsultasi Karir dan Bisnis</a></li>
+                    <li class="nav-item"><a href="#">Download</a></li>
+                    <li class="nav-item"><a href="#">Alumni</a></li>
+                    <li class="nav-item"><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="stepper-container">
+                <div class="stepper-line"></div>
+                <div class="stepper-line-progress" id="stepperProgress" style="width: 28%;"></div>
+
+                <div class="step-item completed" id="step1">
+                    <a href="tracer_form1.html" id="step1Link" style="text-decoration: none; color:inherit;">
+                        <div class="step-circle">1</div>
+                        <div class="step-label">Status<br>Alumni</div>
+                    </a>
+                </div>
+                <div class="step-item active" id="step2">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Detail Status<br>Alumni</div>
+                </div>
+                <div class="step-item" id="step3">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Kompetensi Lulus</div>
+                </div>
+                <div class="step-item" id="step4">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Kompetensi Alumni</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 px-md-4">
+            <div style="max-width: 75%; margin: 0 auto;">
+                <h6 class="text-primary-dark fw-bold mb-4">Informasi Pekerjaan - Bagian 2</h6>
+
+                <div class="accordion custom-accordion" id="tracerAccordion">
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+                                8. Dimana lokasi tempat anda bekerja?
+                            </button>
+                        </h2>
+
+                        <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <select class="form-select input-field answer-input" id="provinsiSelect" onchange="updateKabupaten()">
+                                            <option value="" disabled selected hidden>Pilih Provinsi</option>
+                                            <option>Aceh</option>
+                                            <option>Sumatera Utara</option>
+                                            <option>Sumatera Barat</option>
+                                            <option>Riau</option>
+                                            <option>Kepulauan Riau</option>
+                                            <option>Jambi</option>
+                                            <option>Sumatera Selatan</option>
+                                            <option>DKI Jakarta</option>
+                                            <option>Jawa Barat</option>
+                                            <option>Jawa Tengah</option>
+                                            <option>DI Yogyakarta</option>
+                                            <option>Jawa Timur</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <select class="form-select input-field answer-input" id="kabupatenSelect">
+                                            <option value="" disabled selected hidden>Pilih Kabupaten</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+                                9. Apa nama perusahaan/kantor tempat Anda bekerja?
+                            </button>
+                        </h2>
+
+                        <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control input-field answer-input" id="companyName" placeholder="cth: PT Digital Nusantara">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                                10. Dalam berapa bulan Anda mendapatkan pekerjaan pertama?
+                            </button>
+                        </h2>
+
+                        <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control custom-number input-field answer-input" id="inputMonth" min="1" max="99">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11">
+                                11. Berapa banyak perusahaan/institusi yang merespons lamaran Anda? (Isi dengan angka)
+                            </button>
+                        </h2>
+
+                        <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control custom-number input-field answer-input" id="inputNumber" min="1" max="99">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12">
+                                12. Berapa perusahaan/instansi/institusi yang sudah anda lamar (lewat surat atau e-mail)<br>sebelum anda memeroleh pekerjaan pertama? (isi dengan angka)
+                            </button>
+                        </h2>
+
+                        <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control custom-number input-field answer-input" id="inputApplication" min="1" max="99">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13">
+                                13. Berapa rata-rata pendapatan Anda per bulan? (take home pay)
+                            </button>
+                        </h2>
+
+                        <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control input-field answer-input" id="inputSalary" placeholder="cth: 3.000.000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14">
+                                14. Masukkan NPWP Anda!
+                            </button>
+                        </h2>
+
+                        <div id="collapse14" class="accordion-collapse collapse" data-bs-parent="#tracerAccordion">
+                            <div class="accordion-body">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control input-field answer-input" id="npwpNumber" placeholder="cth: 12.345.678.9-123.456" maxlength="20">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="error-message" class="text-danger small mt-2" style="display: none;">
+                        *Harap isi semua pertanyaan sebelum melanjutkan
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between justify-content-md-end align-items-center gap-3 mt-5 pe-md-5">
+                <a href="tracer_form2_employed.html" class="text-decoration-none d-flex align-items-center" style="color: #428BCA;">
+                    <i class="bi bi-arrow-left d-md-none btn-back fs-2"></i> <span class="d-none d-md-inline" style="border-bottom: 2px solid #428BCA;">Kembali</span>
+                </a>
+                <button type="button" id="btnNext" class="btn btn-next d-flex align-items-center justify-content-center disabled" aria-disabled="true">
+                    <span class="d-none d-md-inline me-2">Selanjutnya</span> <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+            <div style="height: 30px;"></div>
+        </div>
+    </div>
+
+    <div style="height: 70px;"></div>
+    <footer class="footer mt-5 py-2 text-center text-white" style="background-color: #171b58;">
+        <div class="container">
+            <span class="small">Copyright 2026</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const btnNext = document.getElementById('btnNext');
+        const errorMessage = document.getElementById('error-message');
+        const companyName = document.getElementById('companyName');
+        const inputMonth = document.getElementById('inputMonth');
+        const inputNumber = document.getElementById('inputNumber');
+        const inputApplication = document.getElementById('inputApplication');
+        const inputSalary = document.getElementById('inputSalary');
+        const provinsiSelect = document.getElementById('provinsiSelect');
+        const kabupatenSelect = document.getElementById('kabupatenSelect');
+        const npwpNumber = document.getElementById('npwpNumber');
+
+        document.querySelectorAll('.answer-input').forEach(input => {
+            input.addEventListener('input', updateAccordion);
+            input.addEventListener('change', updateAccordion);
+        });
+
+        function updateAccordion() {
+            if (this.id === 'provinsiSelect' || this.id === 'kabupatenSelect') {
+                const provinsiSelect = document.getElementById('provinsiSelect');
+                const kabupatenSelect = document.getElementById('kabupatenSelect');
+                const accordionItem = document.querySelector('[data-bs-target="#collapse8"]').closest('.accordion-item');
+                accordionItem.classList.toggle('is-answered', provinsiSelect.value !== '' && kabupatenSelect.value !== '');
+                return;
+            }
+
+            const accordionItem = this.closest('.accordion-item');
+            accordionItem.classList.toggle('is-answered', this.value.trim() !== '')
+        }
+
+        document.getElementById('tracerAccordion').addEventListener('click', function(e) {
+            const accordionBody = e.target.closest('.accordion-body');
+            if (!accordionBody) return;
+            if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'label' || e.target.tagName.toLowerCase() === 'select') {
+                e.stopPropagation();
+                return;
+            }
+            const collapseElement = accordionBody.closest('.accordion-collapse');
+
+            const bsCollapse = bootstrap.Collapse.getInstance(collapseElement);
+            if (bsCollapse) {
+                bsCollapse.hide();
+            }
+        });
+
+        const dataWilayah = {
+            "DI Yogyakarta": ["Yogyakarta", "Sleman", "Bantul", "Kulon Progo", "Gunungkidul"],
+            "Jawa Timur": ["Surabaya", "Malang", "Sidoarjo", "Gresik", "Banyuwangi", "Bangkalan", "Blitar", "Bojonegoro", "Bondowoso", "Jember", "Jombang", "Kediri", "Lamongan", "Lumajang", "Madiun", "Magetan", "Malang", "Mojokerto", "Nganjuk", "Ngawi", "Pacitan", "Pamekasan", "Pasuruan", "Ponorogo", "Probolinggo", "Sampang", "Sidoarjo", "Situbondo", "Sumenep", "Trenggalek", "Tuban", "Tulungagung"],
+            "Aceh": ["Banda Aceh", "Aceh Besar", "Lhokseumawe", "Sabang", "Aceh Barat", "Aceh Barat Daya", "Aceh Besar", "Aceh Jaya", "Aceh Selatan", "Aceh Singkil", "Aceh Tamiang", "Aceh Tengah", "Aceh Tenggara", "Aceh Timur", "Aceh Utara", "Bener Meriah", "Bireuen", "Gayo Lues", "Nagan Raya", "Pidie", "Pidie Jaya"],
+            "Sumatera Utara": ["Asahan", "Batu Bara", "Dairi", "Deli Serdang", "Humbang Hasundutan", "Karo", "Labuhanbatu", "Labuhanbatu Selatan", "Labuhanbatu Utara", "Langkat", "Mandailing Natal", "Nias", "Nias Selatan", "Nias Utara", "Padang Lawas", "Padang Lawas Utara", "Pakpak Bharat", "Samosir", "Serdang Bedagai", "Simalungun", "Tapanuli Selatan", "Tapanuli Tengah", "Tapanuli Utara", "Toba"],
+            "Sumatera Barat": ["Agam", "Dharmasraya", "Kepulauan Mentawai", "Lima Puluh Kota", "Padang Pariaman", "Pasaman", "Pasaman Barat", "Pesisir Selatan", "Sijunjung", "Solok", "Solok Selatan", "Tanah Datar"],
+            "Riau": ["Bengkalis", "Indragiri Hilir", "Indragiri Hulu", "Kampar", "Kepulauan Meranti", "Kuantan Singingi", "Pelalawan", "Rokan Hilir", "Rokan Hulu", "Siak"],
+            "Kepulauan Riau": ["Bintan", "Karimun", "Kepulauan Anambas", "Lingga", "Natuna"],
+            "Jambi": ["Batanghari", "Bungo", "Kerinci", "Merangin", "Muaro Jambi", "Sarolangun", "Tanjung Jabung Barat", "Tanjung Jabung Timur", "Tebo"],
+            "Sumatera Selatan": ["Banyuasin", "Empat Lawang", "Lahat", "Muara Enim", "Musi Banyuasin", "Musi Rawas", "Musi Rawas Utara", "Ogan Ilir", "Ogan Komering Ilir", "Ogan Komering Ulu", "Ogan Komering Ulu Selatan", "Ogan Komering Ulu Timur", "Penukal Abab Lematang Ilir"],
+            "Jawa Barat": ["Bandung", "Bandung Barat", "Bekasi", "Bogor", "Ciamis", "Cianjur", "Cirebon", "Garut", "Indramayu", "Karawang", "Kuningan", "Majalengka", "Pangandaran", "Purwakarta", "Subang", "Sukabumi", "Sumedang", "Tasikmalaya"],
+            "Jawa Tengah": ["Banjarnegara", "Banyumas", "Batang", "Blora", "Boyolali", "Brebes", "Cilacap", "Demak", "Grobogan", "Jepara", "Karanganyar", "Kebumen", "Kendal", "Klaten", "Kudus", "Magelang", "Pati", "Pekalongan", "Pemalang", "Purbalingga", "Purworejo", "Rembang", "Semarang", "Sragen", "Sukoharjo", "Tegal", "Temanggung", "Wonogiri", "Wonosobo"],
+            "DKI Jakarta": ["Jakarta Pusat", "Jakarta Utara", "Jakarta Barat", "Jakarta Selatan", "Jakarta Timur", "Kepulauan Seribu"],
+        };
+
+        function updateKabupaten() {
+            const provinsi = document.getElementById("provinsiSelect").value;
+            const kabupatenSelect = document.getElementById("kabupatenSelect");
+            let isLoading = true;
+            kabupatenSelect.innerHTML = '<option value="" disabled selected hidden>Pilih Kabupaten</option>';
+            const accordionItem = document.querySelector('[data-bs-target="#collapse8"]').closest('.accordion-item');
+            if(!kabupatenSelect.value){
+                accordionItem.classList.remove('is-answered')
+            }
+
+            if (!dataWilayah[provinsi]) return;
+
+            dataWilayah[provinsi].forEach(kabupaten => {
+                const option = document.createElement("option");
+                option.value = kabupaten;
+                option.textContent = kabupaten;
+                kabupatenSelect.appendChild(option);
+            });
+
+            if(!isLoading){
+                saveFormData();
+            }
+        }
+
+        // membatasi input pada nomor 2
+        companyName.addEventListener('input', function() {
+            this.value = this.value.replace(/[^a-zA-z0-9\s.&-]/g, '');
+        });
+
+        inputMonth.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '').slice(0, 2);
+        });
+
+        // membatasi jumlah karakter yang diinputkan cuma 20 pada pertanyaan terakhir
+        npwpNumber.addEventListener('input', function() {
+            this.value = this.value.slice(0, 20).replace(/[^0-9.-]/g, '');
+        });
+
+        // Fungsi baru untuk menyimpan data secara otomatis (Real-time)
+        function saveFormData() {
+            let tracerData = JSON.parse(localStorage.getItem('tracerData')) || {};
+
+            tracerData.provinsi = provinsiSelect.value;
+            tracerData.kabupaten = kabupatenSelect.value;
+            tracerData.companyName = companyName.value.trim();
+            tracerData.inputMonth = inputMonth.value;
+            tracerData.inputNumber = inputNumber.value;
+            tracerData.inputApplication = inputApplication.value;
+            tracerData.inputSalary = inputSalary.value.trim();
+            tracerData.npwpNumber = npwpNumber.value.trim();
+
+            localStorage.setItem('tracerData', JSON.stringify(tracerData));
+        }
+
+        // Mendaftarkan event listener saveFormData ke semua field input
+        document.querySelectorAll('.answer-input').forEach(input => {
+            input.addEventListener('input', saveFormData);
+            input.addEventListener('change', saveFormData);
+        });
+
+        function updateProgress(){
+            let tracerData = JSON.parse(localStorage.getItem('tracerData')) || {};
+
+            tracerData.step1Completed = !!tracerData.alumniStatus;
+            tracerData.step2Completed = !!(
+                tracerData.q1 &&
+                tracerData.q2 &&
+                tracerData.q3 &&
+                tracerData.q4 &&
+                tracerData.q5 &&
+                tracerData.q6?.length > 0 &&
+                tracerData.q7?.length > 0
+            );
+            localStorage.setItem('tracerData',JSON.stringify(tracerData));
+        }
+
+        const tracerData = JSON.parse(localStorage.getItem('tracerData')) || {};
+        if (tracerData) {
+            if (tracerData.provinsi) {
+                provinsiSelect.value = tracerData.provinsi;
+                updateKabupaten();
+                if (tracerData.kabupaten) {
+                    kabupatenSelect.value = tracerData.kabupaten;
+                }
+            }
+
+            isLoading = false;
+
+            companyName.value = tracerData.companyName || '';
+            inputMonth.value = tracerData.inputMonth ?? '';
+            inputNumber.value = tracerData.inputNumber ?? '';
+            inputApplication.value = tracerData.inputApplication ?? '';
+            inputSalary.value = tracerData.inputSalary || '';
+            npwpNumber.value = tracerData.npwpNumber || '';
+        }
+
+        const stored = localStorage.getItem('tracerData');
+        if(stored){
+            const tracerData = JSON.parse(stored);
+
+            companyName.value = tracerData.companyName ?? '';
+            inputMonth.value = tracerData.inputMonth ?? '';
+            inputNumber.value = tracerData.inputNumber ?? '';
+            inputApplication.value = tracerData.inputApplication ?? '';
+            inputSalary.value = tracerData.inputSalary ?? '';
+            npwpNumber.value = tracerData.npwpNumber ?? '';
+        }
+
+        function validateForm() {
+            let allAnswered = true;
+
+            const provinsi = document.getElementById('provinsiSelect').value;
+            const kabupaten = document.getElementById('kabupatenSelect').value;
+
+            if (!provinsi || !kabupaten) {
+                allAnswered = false;
+            }
+
+            if (document.getElementById('companyName').value.trim() === '') {
+                allAnswered = false;
+            }
+
+            if (document.getElementById('inputMonth').value.trim() === '') {
+                allAnswered = false;
+            }
+
+            if (document.getElementById('inputNumber').value.trim() === '') {
+                allAnswered = false;
+            }
+
+            if (document.getElementById('inputApplication').value.trim() === '') {
+                allAnswered = false;
+            }
+
+            if (document.getElementById('inputSalary').value.trim() === '') {
+                allAnswered = false;
+            }
+
+            if (document.getElementById('npwpNumber').value.trim() === '') {
+                allAnswered = false;
+            }
+
+            if (allAnswered) {
+                btnNext.disabled = false;
+                btnNext.classList.remove('disabled');
+                btnNext.removeAttribute('aria-disabled');
+                errorMessage.style.display = 'none';
+            } else {
+                btnNext.disabled = true;
+                btnNext.classList.add('disabled');
+                btnNext.setAttribute('aria-disabled', 'true');
+            }
+            return allAnswered;
+        }
+        
+        if(tracerData.step1Completed){
+            document.getElementById('step1').classList.add('completed');
+        }
+
+        if(tracerData.step2Completed){
+            document.getElementById('step2').classList.add('completed');
+        }
+
+        if(tracerData.step3Completed){
+            document.getElementById('step3').classList.add('completed');
+        }
+
+        if(tracerData.step4Completed){
+            document.getElementById('step4').classList.add('completed');
+        }
+
+        document.querySelectorAll('.answer-input').forEach(input => {
+            input.addEventListener('input', validateForm);
+            input.addEventListener('change', validateForm);
+        });
+
+        btnNext.addEventListener('click', function(e) {
+            if (!validateForm()) {
+                e.preventDefault();
+                errorMessage.style.display = 'block';
+
+                ['collapse8', 'collapse9', 'collapse10', 'collapse11', 'collapse12', 'collapse13', 'collapse14']
+                .forEach(id => {
+                    const accordionItem = document.querySelector(`[data-bs-target="#${id}"]`).closest('.accordion-item');
+
+                    let valid = true;
+
+                    switch (id) {
+                        case 'collapse8':
+                            valid = provinsiSelect.value !== '' && kabupatenSelect.value !== '';
+                            break;
+                        case 'collapse9':
+                            valid = companyName.value.trim() !== '';
+                            break;
+                        case 'collapse10':
+                            valid = inputMonth.value.trim() !== '';
+                            break;
+                        case 'collapse11':
+                            valid = inputNumber.value.trim() !== '';
+                            break;
+                        case 'collapse12':
+                            valid = inputApplication.value.trim() !== '';
+                            break;
+                        case 'collapse13':
+                            valid = inputSalary.value.trim() !== '';
+                            break;
+                        case 'collapse14':
+                            valid = npwpNumber.value.trim() !== '';
+                            break;
+                    }
+
+                    if (!valid) {
+                        accordionItem.classList.remove('shake');
+                        void accordionItem.offsetWidth;
+                        accordionItem.classList.add('shake');
+                    }
+                });
+            } else {
+                window.location.href = 'tracer_form3.html';
+            }
+        });
+
+        document.querySelectorAll('.answer-input').forEach(input => {
+            updateAccordion.call(input);
+        });
+
+        
+        updateProgress();
+        validateForm();
+        const latestData = JSON.parse(localStorage.getItem('tracerData')) || {};
+
+        if(latestData.step1Completed){
+            document.getElementById('step1').classList.add('completed');
+        }
+
+        if(latestData.step2Completed){
+            document.getElementById('step2').classList.add('completed');
+        }
+    </script>
+</body>
+</html>

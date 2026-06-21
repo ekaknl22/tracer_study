@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracer Study UAD Tahap II</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar custom-navbar shadow-sm p-0">
+        <div class="container-fluid p-0 ps-2">
+
+            <a class="navbar-brand text-white d-flex align-items-center" href="#">
+                <img src="asset/Logo-UAD-Berwarna.png" alt="logo" class="navbar-logo">
+                <span class="fw-light d-none d-md-inline">Career Development Center</span>
+                <span class="fw-light d-inline d-md-none">CDC</span>
+            </a>
+
+            <button class="navbar-toggler border-0 d-md-none me-3 my-custom-toggler" type="button" data-bs-toggle="collapse" style="background-color: #25CCF7;" data-bs-target="#navbarContent">
+                <i class="bi bi-list text-white"></i>
+            </button>
+
+            <div class="d-flex align-items-center h-100 gap-3 d-none d-md-flex">
+                <div class="input-group search-box">
+                    <input type="text" class="form-control form-control-sm rounded-0" placeholder="search">
+                    <button class="btn btn-info btn-sm text-white rounded-0" type="button">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+
+                <div class="profile-dropdown bg-info rounded-cube px-2 py-1 d-flex align-items-center gap-1">
+                    <i class="bi bi-person-circle text-white fs-4"></i>
+                    <i class="bi bi-caret-down-fill text-white"></i>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-tab tracer-form3">
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <div class="menu-bar">
+                <ul class="menu-list">
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#">Lowongan Kerja</a></li>
+                    <li class="nav-item"><a href="#">Berita</a></li>
+                    <li class="nav-item"><a href="#">Event</a></li>
+                    <li class="nav-item"><a class="active" href="#">Tracer Study</a></li>
+                    <li class="nav-item"><a href="#">Konsultasi Alumni Wirausaha</a></li>
+                    <li class="nav-item"><a href="#">Konsultasi Karir dan Bisnis</a></li>
+                    <li class="nav-item"><a href="#">Download</a></li>
+                    <li class="nav-item"><a href="#">Alumni</a></li>
+                    <li class="nav-item"><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+
+            <div class="stepper-container">
+
+                <div class="stepper-line"></div>
+                <div class="stepper-line-progress" style="width: 48%;"></div>
+
+                <div class="step-item completed">
+                    <a href="tracer_form1.html" style="text-decoration: none; cursor: pointer;">
+                        <div class="step-circle">1</div>
+                        <div class="step-label">
+                            Status<br>Alumni
+                        </div>
+                    </a>
+                </div>
+
+                <div class="step-item completed">
+                    <a href="tracer_form1.html" style="text-decoration: none; cursor: pointer;">
+                        <div class="step-circle">2</div>
+                        <div class="step-label">
+                            Detail Status<br>Alumni
+                        </div>
+                    </a>
+                </div>
+
+                <div class="step-item active">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">
+                        Kompetensi Lulus
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">
+                        Kompetensi Alumni
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card form-card shadow-sm border-1 mx-auto" style="max-width: 900px;">
+            <div class="card-body p-4 p-md-4">
+                <h6 class="text-primary-dark fw-bold mb-2 mt-0 pt-0">
+                    Kompetensi Lulus Alumni
+                </h6>
+
+                <p class="fw-bold mb-1">
+                    Pada saat lulus, pada tingkat mana kompetensi di bawah ini anda kuasai
+                </p>
+
+                <div class="text-muted small mb-4">
+                    Skala 1 = Sangat Rendah<br>
+                    Skala 2 = Tidak Setuju<br>
+                    Skala 3 = Netral<br>
+                    Skala 4 = Setuju<br>
+                    Skala 5 = Sangat Tinggi
+                </div>
+
+                <form id="kompetensiForm">
+
+                    <div class="table-responsive">
+
+                        <table class="table align-middle">
+
+                            <thead class="table-light">
+                                <tr>
+                                    <th class="kompetensi-title text-start">
+                                        Kompetensi
+                                    </th>
+
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="tableBody">
+                            </tbody>
+                        </table>
+                        <div id="error-message" class="text-danger small mt-2" style="display: none">
+                            *Harap isi semua Kompetensi sebelum melanjutkan
+                        </div>
+                    </div>
+                </form>
+
+                <div class="d-flex justify-content-between justify-content-md-end align-items-center gap-3 mt-5 pe-md-5">
+                    <a href="tracer_form1.html" class="text-decoration-none d-flex align-items-center" style="color: #428BCA;">
+                        <i class="bi bi-arrow-left d-md-none btn-back fs-2"></i> <span class="d-none d-md-inline" style="border-bottom: 2px solid #428BCA;">Kembali</span> 
+                    </a>
+                    <button type="button" id="btnNext" class="btn btn-next d-flex align-items-center justify-content-center disabled" aria-disabled="true">
+                        <span class="d-none d-md-inline me-2">Selanjutnya</span> <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+                <div style="height: 30px;"></div>
+            </div>
+        </div>
+        <div style="height: 70px;"></div>
+    </div>
+
+    <footer class="footer mt-5 py-2 text-center text-white" style="background-color: #171b58;">
+        <div class="container">
+            <span class="small">Copyright 2026</span>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const kompetensi = [
+            "Etika",
+            "Keahlian berdasarkan bidang ilmu",
+            "Bahasa Inggris",
+            "Penggunaan Teknologi Informasi",
+            "Komunikasi",
+            "Kerja sama tim",
+            "Pengembangan Diri"
+        ];
+
+        const tableBody = document.getElementById("tableBody");
+
+        kompetensi.forEach((item, index) => {
+
+            let row = `
+                <tr>
+                    <td class="fw-medium">
+                        ${item}
+                    </td>
+            `;
+
+            for (let i = 1; i <= 5; i++) {
+
+                row += `
+                    <td class="text-center">
+
+                        <div class="form-check d-inline-block text-center m-0 p-0">
+                            <input
+                                class="form-check-input likert-radio float-none mx-auto"
+                                type="radio"
+                                name="kompetensi_${index}"
+                                id="k${index}_${i}"
+                                value="${i}"
+                            >
+                            <label for="k${index}_${i}"></label>
+
+                        </div>
+
+                    </td>
+                `;
+            }
+
+            row += `</tr>`;
+
+            tableBody.innerHTML += row;
+        });
+
+        const btnNext = document.getElementById('btnNext');
+        const errorMessage = document.getElementById('error-message');
+
+        function saveKompetensi() {
+            let tracerData = JSON.parse(localStorage.getItem('tracerData')) || {};
+
+            tracerData.kompetensiLulus = {};
+
+            kompetensi.forEach((item, index) => {
+                const selected = document.querySelector(
+                    `input[name="kompetensi_${index}"]:checked`
+                );
+
+                tracerData.kompetensiLulus[`kompetensi_${index}`] =
+                    selected ? selected.value : '';
+            });
+
+            localStorage.setItem('tracerData', JSON.stringify(tracerData));
+        }
+
+        const tracerData = JSON.parse(localStorage.getItem('tracerData')) || {};
+        if (tracerData.kompetensiLulus) {
+            kompetensi.forEach((item, index) => {
+                const savedValue =
+                    tracerData.kompetensiLulus[`kompetensi_${index}`];
+                if (savedValue) {
+                    const radio = document.querySelector(
+                        `input[name="kompetensi_${index}"][value="${savedValue}"]`
+                    );
+                    if (radio) {
+                        radio.checked = true;
+                    }
+                }
+            });
+        }
+
+        function validateForm(){
+            let allAnswered = true;
+            kompetensi.forEach((item, index) => {
+                const selected = document.querySelector(
+                    `input[name="kompetensi_${index}"]:checked`
+                );
+                if(!selected){
+                    allAnswered = false;
+                }
+            });
+
+            if(allAnswered){
+                btnNext.classList.remove('disabled');
+                btnNext.removeAttribute('aria-disabled');
+                errorMessage.style.display='none';
+            }else{
+                btnNext.classList.add('disabled');
+                btnNext.setAttribute('aria-disabled', 'true');
+            }
+            return allAnswered;
+        }
+
+        document.querySelectorAll('.likert-radio').forEach(radio => {
+
+            radio.addEventListener('change', () => {
+                saveKompetensi();
+                validateForm();
+            });
+
+        });
+
+        function getNextPage() {
+
+            const tracerData =
+                JSON.parse(localStorage.getItem('tracerData')) || {};
+
+            switch (tracerData.alumniStatus) {
+
+                case 'employed':
+                    return 'tracer_form4.html';
+
+                case 'self_employed':
+                    return 'tracer_form4.html';
+
+                case 'continue_study':
+                    return 'tracer_form4_skip.html';
+
+                case 'job_search':
+                    return 'tracer_form4_skip.html';
+
+                case 'not_work':  
+                    return 'tracer_form4_skip.html';
+                default:
+                    return 'tracer_form1.html';
+            }
+        }
+
+        btnNext.addEventListener('click', function(){
+
+            if (!validateForm()) {
+                errorMessage.style.display = 'block';
+                return;
+            }
+
+            saveKompetensi();
+
+            window.location.href = getNextPage();
+        });
+
+        const btnBack = document.getElementById('btnBack');
+        if (tracerData.alumniStatus === 'employed') {
+            btnBack.href = 'tracer_form2_details.html';
+        }
+        else if (tracerData.alumniStatus === 'self_employed') {
+            btnBack.href = 'tracer_form2_self_employed.html';
+        }
+        else if (tracerData.alumniStatus === 'continue_study') {
+            btnBack.href = 'tracer_form2_continuing_study.html';
+        }else if(tracerData.alumniStatus === 'job_search'){
+            btnBack.href = 'tracer_form2_jobsearch.html';
+        }
+        validateForm();
+    </script>
+</body>
+</html>
